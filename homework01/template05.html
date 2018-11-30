@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var internationalSize = prompt("Please enter the international size: ");
+    internationalSize.toLocaleLowerCase();
+    var euroSize = null;
+    if (isNaN(internationalSize)) {
+        switch (internationalSize) {
+            case 'xs':
+                euroSize = "32-36";
+                break;
+            case 's':
+                euroSize = "36-40";
+                break;
+            case 'm':
+                euroSize = "40-44";
+                break;
+            case 'l':
+                euroSize = "44-48";
+                break;
+            case 'xl':
+                euroSize = "48-52";
+                break;
+            case 'xxl':
+                euroSize = "52-56";
+                break;
+        }
+        alert("European size is: " + euroSize);
+    } else {
+        alert("Incorrect size!");
+    }
+</script>
+</body>
+</html>
