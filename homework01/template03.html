@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function withoutRemainder(number) {
+        if (number % 3 === 0 && number % 5 === 0){
+            return number;
+        } 
+    }
+
+    for (var i = 1; i < 200; i++) {
+        console.log(withoutRemainder(i));
+    }
+</script>
+
+</body>
+</html>

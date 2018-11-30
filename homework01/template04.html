@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var value = parseInt(prompt("Введите общую сумму потраченных денег: ", 0));
+    var discount = 0;
+
+    // алгоритм
+    if (value < 0 || isNaN(value)) {
+        alert("Данные не корректны");
+    } else {
+        var lastPurchase = parseInt(prompt("Введите суму последней покупки: ", 0));
+        value += lastPurchase;
+        if (value > 0 && value <= 1000) {
+            discount = 2;
+        } else if (value > 1000 && value <= 3000) {
+            discount = 5;
+        } else if (value > 3000 && value <= 10000) {
+            discount = 8;
+        } else {
+            discount = 10;
+        }
+        alert("Покупателю полагается скидка: " + discount + "%");
+    }
+</script>
+
+</body>
+</html>
