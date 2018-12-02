@@ -7,32 +7,31 @@
 <body>
 <script>
     var internationalSize = prompt("Please enter the international size: ");
-    internationalSize.toLocaleLowerCase();
-    var euroSize = null;
-    if (isNaN(internationalSize)) {
-        switch (internationalSize) {
-            case 'xs':
-                euroSize = "32-36";
-                break;
-            case 's':
-                euroSize = "36-40";
-                break;
-            case 'm':
-                euroSize = "40-44";
-                break;
-            case 'l':
-                euroSize = "44-48";
-                break;
-            case 'xl':
-                euroSize = "48-52";
-                break;
-            case 'xxl':
-                euroSize = "52-56";
-                break;
-        }
-        alert("European size is: " + euroSize);
-    } else {
-        alert("Incorrect size!");
+    switch (internationalSize.toLocaleLowerCase()) {
+        case 'xs':
+            printEuroSize("32-36");
+            break;
+        case 's':
+            printEuroSize("36-40");
+            break;
+        case 'm':
+            printEuroSize("40-44");
+            break;
+        case 'l':
+            printEuroSize("44-48");
+            break;
+        case 'xl':
+            printEuroSize("48-52");
+            break;
+        case 'xxl':
+            printEuroSize("52-56");
+            break;
+        default:
+            alert("[" + internationalSize + "] is incorrect international size!");
+    }
+
+    function printEuroSize(size) {
+        alert("European size is: " + size);
     }
 </script>
 </body>
