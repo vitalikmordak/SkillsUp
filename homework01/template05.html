@@ -7,7 +7,7 @@
 <body>
 <script>
     var internationalSize = prompt("Please enter the international size: ");
-    switch (internationalSize.toLocaleLowerCase()) {
+    switch (internationalSize.toLocaleLowerCase().trim()) {
         case 'xs':
             printEuroSize("32-36");
             break;
