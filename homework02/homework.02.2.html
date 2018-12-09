@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var i = 150;
+    document.write("for loop start -></br>");
+    for (i; i <= 200; i++) {
+        isEven(i);
+    }
+    document.write("</br><- for loop end ");
+    document.write("</br>while loop start -> </br>");
+    i = 150;
+    while (i <= 200) {
+        isEven(i);
+        i++;
+    }
+    document.write("</br><- while loop end");
+    document.write("</br>do-while loop start -> </br>");
+    i = 150;
+    do {
+        isEven(i)
+        i++;
+    } while (i <= 200);
+    document.write("</br><- do-while loop end");
+
+
+    function isEven(number) {
+        if (number % 2 === 0)
+            document.writeln(number);
+    }
+
+</script>
+
+</body>
+</html>
