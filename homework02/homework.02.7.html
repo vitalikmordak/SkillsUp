@@ -13,6 +13,9 @@
         userInput = prompt("Your password is incorrect, try again. You can try only " + attempts + " time(s)", "");
         attempts--;
     }
+    if (userInput === null) {
+        alert("Access denied!");
+    }
     if (attempts === 0 && userInput !== password) {
         alert("Please try later!");
     }
