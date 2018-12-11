@@ -1,6 +1,7 @@
 function input() {
     // var inputSize = document.getElementsByName("internationalSize").value;
-    var inputSize = document.getElementsByName("internationalSize").item(0).value;
+    // var inputSize = document.getElementsByName("internationalSize").item(0).value;
+    var inputSize = document.getElementById("internationalSize").value;
     switch (inputSize.toLocaleLowerCase().trim()) {
         case 'xs':
             printEuroSize("32-36");

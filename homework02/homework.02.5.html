@@ -6,12 +6,27 @@
 </head>
 <body>
 <script>
-    const inputNum = parseInt(prompt("Please enter the number:", 0));
-    let result = 1;
-    for (let i = 1; i <= inputNum; i++) {
-        result *= i;
+    var inputNum = 0;
+    while (!isNaN(inputNum) || inputNum >= 0) {
+        inputNum = prompt("Please enter the number:", "0");
+        if (inputNum == null) break;
+        inputNum = parseInt(inputNum);
+
+        if (isNaN(inputNum)) {
+            alert("It is not a number!");
+            continue;
+        } else if (inputNum < 0) {
+            alert("Please enter a positive number!");
+            continue;
+        }
+
+        alert("Factorial of " + inputNum + " is: " + factorial(inputNum));
+        break;
     }
-    alert("Factorial of " + inputNum + " is: " + result);
+
+    function factorial(num) {
+        return num !== 0 ? num * factorial(num - 1) : 1;
+    }
 
 </script>
 
