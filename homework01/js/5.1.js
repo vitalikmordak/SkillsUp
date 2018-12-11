@@ -21,7 +21,8 @@ function input() {
             break;
         default:
             // set error message
-            document.getElementById("error").innerText = "[" + inputSize + "] is incorrect international size!";
+            document.getElementById("error").innerText = "[" + inputSize
+                + "] is incorrect international size!";
             return false;
     }
 }
