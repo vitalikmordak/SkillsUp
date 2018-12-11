@@ -7,20 +7,18 @@
 <body>
 <script>
     const password = "Passw0rd!";
-    var userInput = prompt("Enter your password", "");
-    let times = 5;
-    while (userInput !== password && times !== 0) {
-        if (userInput === null) {
-            alert("Access denied!")
-            break;
-        }
-        userInput = prompt("Your password is incorrect, try again. You can try only " + times + " time(s)", "");
-        times--;
+    let userInput = prompt("Enter your password", "");
+    let attempts = 5;
+    while ((userInput !== password && userInput !== null) && attempts !== 0) {
+        userInput = prompt("Your password is incorrect, try again. You can try only " + attempts + " time(s)", "");
+        attempts--;
     }
-    if (times === 0 && userInput!== password)
+    if (attempts === 0 && userInput !== password) {
         alert("Please try later!");
-    if (userInput !== null && times >= 0)
+    }
+    if (userInput === password) {
         alert("You successfully logged in!");
+    }
 
 </script>
 </body>
