@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var inputText = prompt("Please enter string with whitespaces:", "").split(" ");
+    var output = "";
+    for (var i = 0; i < inputText.length; i++) {
+        if (i % 2 === 0) {
+            output += inputText[i].toLowerCase().concat(" ");
+        } else {
+            output += inputText[i].toUpperCase().concat(" ");
+        }
+    }
+    alert(output.slice(0, -1));
+</script>
+</body>
+</html>

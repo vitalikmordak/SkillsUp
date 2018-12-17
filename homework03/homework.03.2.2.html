@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var attempts = 5;
+    var randomNum = Math.floor(Math.random() * 10);
+    var userNum = parseInt(prompt("Please enter number from 0 to 100:"), 0);
+    var inputHistory = userNum;
+
+    while (userNum !== randomNum && attempts > 1 && !isNaN(userNum)) {
+        attempts--;
+        if (userNum > randomNum) {
+            alert("Your number more than guess number!");
+        } else {
+            alert("Your number less than guess number!");
+        }
+        userNum = parseInt(prompt("You have " + attempts + " attempt(s).\n" +
+            "Your numbers history is: " + inputHistory +
+            "\nPlease try again:"), 0);
+        inputHistory += " " + userNum;
+    }
+
+    if (userNum === randomNum) {
+        alert("Yeah! You guessed the number. Congratulations!!! ")
+    }
+</script>
+
+</body>
+</html>

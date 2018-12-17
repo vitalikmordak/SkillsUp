@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var email = prompt("Please enter email:", "");
+
+    var emailParts = email.split("@");
+    var emailName = "";
+    for (var i = 0; i < emailParts[0].length; i++) {
+        emailName += "*";
+    }
+    alert(emailName + "@" + emailParts[1]);
+</script>
+
+</body>
+</html>

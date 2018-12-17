@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var email = prompt("Please enter your email:", "");
+    validateEmail(email);
+
+    function validateEmail(email) {
+        var emailParts = email.split("@");
+        var domainParts = emailParts[1].split(".");
+        if (emailParts.length !== 2
+            || domainParts.length <= 1
+            || emailParts[1].indexOf(".") === 0
+            || emailParts[1].lastIndexOf(".") === emailParts[1].length - 1
+            || emailParts[0].length === 0) {
+            alert(`Email ${email} is not valid`);
+        } else {
+            alert(`Email ${email} is valid`);
+        }
+    }
+</script>
+
+</body>
+</html>
