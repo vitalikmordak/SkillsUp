@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var arr = [1, 5, 2, 8, 5, 7, 16, 9];
+
+    console.log(getRandomElement(arr));
+
+    function getRandomElement(array) {
+        var randomIndex = Math.floor(Math.random() * array.length);
+        return array[randomIndex];
+    }
+</script>
+</body>
+</html>

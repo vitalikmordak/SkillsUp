@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var arr = ["Football", "Basketball", "Volleyball"];
+
+    var joinedArr1 = joinArray(arr, "*");
+    console.log(joinedArr1);
+
+    var joinedArr2 = joinArray(arr, "_+_");
+    console.log(joinedArr2);
+
+    function joinArray(array, splitter) {
+        return array.join(splitter);
+    }
+</script>
+</body>
+</html>

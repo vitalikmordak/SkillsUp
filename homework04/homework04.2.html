@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var array = [1, 5, 2, 8, 5, 7, 16, 9];
+
+    var filtered1 = filterRange(array, 4, 9);
+    console.log(filtered1);
+
+    var filtered2 = filterRange(array, 10, 15);
+    console.log(filtered2);
+
+    function filterRange(arr, a, b) {
+        var filteredArr = [];
+        /* for (var i = 0; i < arr.length; i++) {
+             if (arr[i] >= a && arr[i] <= b) {
+                 filteredArr.push(arr[i]);
+             }
+         }*/
+        filteredArr = arr.filter(value => {
+            return value >= a && value <= b;
+        });
+        return filteredArr;
+    }
+</script>
+</body>
+</html>

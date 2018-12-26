@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var arr = [4, 67, 23, 6, 10, 15, 22];
+    console.log(arrayAverage(arr));
+
+    function arrayAverage(array) {
+        var sum = 0;
+        for (var i = 0; i < array.length; i++) {
+            sum += parseInt(array[i]);
+        }
+        return sum / arr.length;
+    }
+</script>
+
+</body>
+</html>
